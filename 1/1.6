@@ -1,0 +1,28 @@
+#include <iostream>
+using namespace std;
+
+void countEvenAndOdd(int arr[], int size, int& evenCount, int& oddCount) {
+    evenCount = 0;
+    oddCount = 0;
+    for (int i = 0; i < size; ++i) {
+        if (arr[i] % 2 == 0) {
+            evenCount++;
+        }
+        else {
+            oddCount++;
+        }
+    }
+}
+
+int main() {
+    int arr[] = { 5, 2, 8, 3, 1, 6, 7 };
+    int size = sizeof(arr) / sizeof(arr[0]);
+    int evenCount, oddCount;
+
+    countEvenAndOdd(arr, size, evenCount, oddCount);
+
+    cout << "Number of even numbers in the array: " << evenCount << endl;
+    cout << "Number of odd numbers in the array: " << oddCount << endl;
+
+    return 0;
+}
